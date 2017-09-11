@@ -9,13 +9,21 @@
   <meta name="author" content="Cloudy Apple">
 
   <link rel="stylesheet" href="css/style.css">
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+
+<style type="text/css">
+#cycler{position:relative;
+    }
+#cycler img{position:absolute;z-index:1;background-color:white}
+#cycler img.active{z-index:3}
+</style>
+
 </head>
 
 <body>
@@ -31,12 +39,30 @@
 
 
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-3">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+<!--
+<div class="jumbotfron jfumbotron-fluid">
+  <div class="container-fluid">
+-->
+    <div id="slideshow">
+        <div class="slideshow-box-parent">
+        <div class="slideshow-box">
+            <p>Choose from a selection of dishes prepared with seasonal veges, pay as it weighs!</p>
+        </div>
+        </div>
+   <div class="slide">
+     <img src="img/zi-jia-cover-1.jpg">
+   </div>
+   <div class="slide">
+     <img src="img/zi-jia-cover-2.jpg">
+   </div>
+   <div class="slide">
+     <img src="img/zi-jia-cover-3.jpg">
+   </div>
+</div>
+<!--
   </div>
 </div>
+-->
 
     <div class="container about">
         <div class="row">
@@ -46,15 +72,15 @@
                         <img src="img/leaf.png">
                         <h2>Our story</h2>
                     </div>
-                    <p>Motivation is the key to positivity in our lives. If we were not motivated enough, we would just not have the will in us to go about our daily lives. Its motivation that helps us get through the most mundane things. Some other things to fill out more text. Fuck yeah motivation.</p>
+                    <p>Zi Jia House 自家素 means ‘your home’.</p><p>Our concept for a full vegan buffet in the heart of the city was born out of the desire to fuse values of compassion for life with a healthy, convenient and most importantly delicious dining experience, served with the familiarity of traditional Asian home cooking. </p><p>We hope to welcome you soon!</p>
                 </div>
             </div>
             <div class="col-md-7 gallery">
                 <div class="row">
-                    <div class="col-sm-6 col-3"><img src="img/cloudy-apple-logo.png"></div>
-                    <div class="col-sm-6 col-3"><img src="img/cloudy-apple-logo.png"></div>
-                    <div class="col-sm-6 col-3"><img src="img/cloudy-apple-logo.png"></div>
-                    <div class="col-sm-6 col-3"><img src="img/cloudy-apple-logo.png"></div>
+                    <div class="col-sm-6 col-3"><img src="img/zi-jia-1.png"></div>
+                    <div class="col-sm-6 col-3"><img src="img/zi-jia-2.png"></div>
+                    <div class="col-sm-6 col-3"><img src="img/zi-jia-3.png"></div>
+                    <div class="col-sm-6 col-3"><img src="img/zi-jia-4.png"></div>
                 </div>
             </div>
         </div>
@@ -64,8 +90,8 @@
         <div class="row">
             <div class="col-md-12 map-inner">
                 <div class="row">
-                    <div class="col-md-8">
-                        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:300px;width:100%;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://www.masoun-loubnan.org/">shop online using discounts</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-36.8484597,174.76333150000005),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-36.8484597,174.76333150000005)});infowindow = new google.maps.InfoWindow({content:'<strong>auckland</strong><br>auckland<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                    <div class="col-md-8 no-padding">
+                        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:300px;width:100%;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-36.8484597,174.76333150000005),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-36.8484597,174.76333150000005)});infowindow = new google.maps.InfoWindow({content:'<strong>Zi Jia House</strong>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
                     </div>
                     <div class="col-md-4">
                     <div class="img-title">
@@ -88,10 +114,24 @@
     <footer>
         <img src="img/cloudy-apple-logo.png"><p>Website design © Cloudy Apple 2017 </p>
     </footer>
-        <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+
+//$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > .slide:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  5000);
+</script>
+
 </body>
 </html>
