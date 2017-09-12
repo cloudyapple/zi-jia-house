@@ -54,6 +54,7 @@ h2 {
     font-weight: 400;
     line-height: 32px;
     margin-bottom: 14px;
+    text-transform: uppercase;
 }
 .img-title {
     position: relative;
@@ -136,12 +137,13 @@ footer {
 
 }
 footer p {
-
+margin: 0;
 }
 footer img {
     display: inline;
     float: right;
     overflow: auto;
+    padding-left: 10px;
 }
 
 .map {
@@ -188,10 +190,32 @@ footer img {
     margin: 0 auto;
     border-radius: 2px;
     z-index: 10;
-    width: 300px;
-    padding: 10px;
-    height: 100px;
+    width: 380px;
+    padding: 15px 10px;
+    min-height: 100px;
     background:rgba(255,255,255,0.9);
+}
+#slideshow .slideshow-box .sb-left {
+    width: 70%;
+    float: left;
+    padding: 0 30px 0 10px;
+    box-sizing: border-box;
+}
+#slideshow .slideshow-box .sb-right {
+    width: 20%;
+    float: left;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
+}
+#slideshow .slideshow-box .sb-price {
+    font-size: 24px;
+    text-align: center;
+}
+#slideshow .slideshow-box .sb-weight {
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
 }
 .no-padding {
     padding-right: 0 !important;
